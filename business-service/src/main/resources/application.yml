@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: business-service
+
+server:
+  port: 0
+
+grpc:
+  server:
+    port: 9090

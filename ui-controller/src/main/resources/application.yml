@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: ui-controller
+
+server:
+  port: 8080
+
+grpc:
+  client:
+    business-service:
+      address: "static://localhost:9090"
+      negotiationType: plaintext
