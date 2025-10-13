@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_package = "com.example.grpc";
+option java_multiple_files = true;
+
+package search;
+
+message FavoriteRequest {
+  string user_id = 1;
+}
+
+message FavoriteItem {
+  string query = 1;
+  int64 usage_count = 2;
+}
+
+message FavoriteResponse {
+  repeated FavoriteItem favorites = 1;
+}
+
+service SearchFavoritesService {
+  rpc GetFavorites(FavoriteRequest) returns (FavoriteResponse);
+}
